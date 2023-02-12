@@ -23,22 +23,20 @@ export default function SideDrawer(props) {
 
   return (
     <div>
-      {/* <React.Fragment> */}
-        <Drawer
-          sx={{
-            width: drawerWidth,
-            flexShrink: 0,
-            [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-          }}
-          anchor="left"
-          open={props.open}
-          variant={variant ? 'permanent' : 'temporary'}
-          onClose={props.onClick}
-        >
-          <Toolbar />
-          {list("left")}
-        </Drawer>
-      {/* </React.Fragment> */}
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+        }}
+        anchor="left"
+        open={props.open}
+        variant={variant ? 'permanent' : 'temporary'}
+        onClose={props.onClick}
+      >
+        <Toolbar />
+        {list("left")}
+      </Drawer>
     </div>
   );
 }
